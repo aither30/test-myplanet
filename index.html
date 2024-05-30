@@ -1,1 +1,206 @@
-<a  href="./index.php"></a>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Inputan Vendor</title>
+    <link rel="stylesheet" href="upload.css" />
+  </head>
+
+  <body>
+    <header> 
+      <nav>
+      <div class="nav-bar">
+          <i class='bx bx-menu sidebarOpen' ></i>
+          <span class="logo navLogo"><a href="#">CodingLab</a></span>
+          <div class="menu">
+              <div class="logo-toggle">
+                  <span class="logo"><a href="#">CodingLab</a></span>
+                  <i class='bx bx-x siderbarClose'></i>
+              </div>
+              <ul class="nav-links">
+                  <li><a href="./index.php">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Portfolio</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+          </div>
+          <div class="darkLight-searchBox">
+              <div class="dark-light">
+                  <i class='bx bx-moon moon'></i>
+                  <i class='bx bx-sun sun'></i>
+              </div>
+              <div class="searchBox">
+                 <div class="searchToggle">
+                  <i class='bx bx-x cancel'></i>
+                  <i class='bx bx-search search'></i>
+                 </div>
+                  <div class="search-field">
+                      <input type="text" placeholder="Search...">
+                      <i class='bx bx-search'></i>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </nav>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <form
+        id="vendorForm"
+        action="upload.php"
+        method="post"
+        enctype="multipart/form-data"
+      >
+      <section class="form1">
+        <div class="form-group">
+          <label for="vendorImage">Gambar atau Logo Vendor:</label>
+          <input
+            type="file"
+            id="vendorImage"
+            name="vendorImage"
+            required
+            accept="image/*"
+          />
+        </div>
+        <div class="layanan-container">
+          <label for="services1">Layanan 1:</label>
+          <textarea id="services1" name="services[]" rows="4" required></textarea>
+          <label for="services2">Layanan 2:</label>
+          <textarea id="services2" name="services[]" rows="4"></textarea>
+          <label for="services3">Layanan 3:</label>
+          <textarea id="services3" name="services[]" rows="4"></textarea>
+        </div>
+        <div class="blog-container">
+          <label for="blog1">Blog 1:</label>
+          <textarea id="blog1" name="blog[]" rows="4" required></textarea>
+          <label for="blog2">Blog 2:</label>
+          <textarea id="blog2" name="blog[]" rows="4"></textarea>
+        </div>
+      </section>
+        <section class="form2">
+          <div class="vendor-container">
+            <label for="vendorName">Nama Vendor:</label>
+            <input type="text" id="vendorName" name="vendorName" required />
+          </div>
+        <div class="harga-produk-vendor">
+          <label for="harga">Harga Produk pertama</label>
+          <input type="text" id="blog" name="blog" required />
+          <label for="harga">Harga Produk kedua</label>
+          <input type="text" id="blog" name="blog" required />
+          <label for="harga">Harga Produk ketiga</label>
+          <input type="text" id="blog" name="blog" />
+        </div>
+        <div class="portofolio-container">
+          <label for="portfolio">Portofolio:</label>
+          <p>Portofolio 1</p>
+          <input
+            type="file"
+            id="portfolio"
+            name="portfolio[]"
+            multiple
+            required
+            accept="image/*"
+          />
+          <p>Portofolio 2</p>
+          <input
+            type="file"
+            id="portfolio"
+            name="portfolio[]"
+            multiple
+            required
+            accept="image/*"
+          />
+          <p>Portofolio 3</p>
+          <input
+            type="file"
+            id="portfolio"
+            name="portfolio[]"
+            multiple
+            required
+            accept="image/*"
+          />
+        </div>
+        <div class="contact-container">
+          <label for="contact">No Perusahaan</label>
+          <input id="contact" name="contact" rows="4" required />
+          <label for="contact">Email Perusahaan</label>
+          <input id="contact" name="contact" required />
+          <label for="contact">Alamat Perusahaan</label>
+          <textarea id="contact" name="contact" rows="4" required></textarea>
+        </div>
+        </section>
+        <section class="form3">
+          <div class="aboutUs-container">
+            <label for="aboutVendor">Tentang Kami:</label>
+            <textarea
+              id="aboutVendor"
+              name="aboutVendor"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+        <div class="faq-container">
+          <label for="faq">FAQ:</label>
+          <p>Pertanyaan 1</p>
+          <textarea id="faq" name="faq" rows="4" required></textarea>
+          <p>Jawaban 1</p>
+          <textarea id="faq" name="faq" rows="4" required></textarea>
+          <p>Pertanyaan 2</p>
+          <textarea id="faq" name="faq" rows="4"></textarea>
+          <p>Jawaban 2</p>
+          <textarea id="faq" name="faq" rows="4"> </textarea>
+        </div>
+        <button type="submit">Submit</button>
+        </section>
+      </form>
+    </main>
+    
+<script>
+  const body = document.querySelector("body"),
+        nav = document.querySelector("nav"),
+        modeToggle = document.querySelector(".dark-light"),
+        searchToggle = document.querySelector(".searchToggle"),
+        sidebarOpen = document.querySelector(".sidebarOpen"),
+        siderbarClose = document.querySelector(".siderbarClose");
+        let getMode = localStorage.getItem("mode");
+            if(getMode && getMode === "dark-mode"){
+              body.classList.add("dark");
+            }
+  // js code to toggle dark and light mode
+        modeToggle.addEventListener("click" , () =>{
+          modeToggle.classList.toggle("active");
+          body.classList.toggle("dark");
+          // js code to keep user selected mode even page refresh or file reopen
+          if(!body.classList.contains("dark")){
+              localStorage.setItem("mode" , "light-mode");
+          }else{
+              localStorage.setItem("mode" , "dark-mode");
+          }
+        });
+  // js code to toggle search box
+          searchToggle.addEventListener("click" , () =>{
+          searchToggle.classList.toggle("active");
+        });
+   
+        
+  //   js code to toggle sidebar
+  sidebarOpen.addEventListener("click" , () =>{
+      nav.classList.add("active");
+  });
+  body.addEventListener("click" , e =>{
+      let clickedElm = e.target;
+      if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+          nav.classList.remove("active");
+      }
+  });
+  </script>
+  
+    <script src="upload.js"></script>
+  </body>
+</html>
