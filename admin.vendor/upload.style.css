@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url("../images/Bakground_home.png");
+
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 60px;
+}
+
+/*====================================================================== Nav =====================================================================*/
+nav {
+  background: linear-gradient(to right, #004b85, #3a005b, #560032);
+  width: 100%;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 50px;
+  z-index: 2;
+  transition: top 0.3s;
+  position: fixed;
+  top: 0;
+}
+
+nav.active {
+  top: -60px;
+}
+
+nav .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+select {
+  padding: 5px;
+  margin-right: 10px;
+  background-color: #000000;
+  color: #fff;
+  margin-left: 10px;
+  border: none;
+  border-color: #000000;
+}
+
+button {
+  padding: 5px 10px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.home a,
+.cek-transaction a,
+.compare-price a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin-right: 0px;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container button {
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-container button .material-icons {
+  font-size: 24px;
+  color: #fff;
+}
+
+.search-container button:hover {
+  background-color: transparent;
+}
+
+.text {
+  margin-left: 5px;
+}
+
+.header-content-1,
+.header-content-2,
+.right-content,
+.left-content,
+.language-selector {
+  display: inline-flex;
+  gap: 10px;
+}
+
+.cek-transaction,
+.compare-price,
+.home {
+  display: flex;
+  gap: 10px;
+  margin-left: 30px;
+}
+
+.language-selector select {
+  padding: 8px 10px;
+  font-size: 16px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #ffffff;
+  appearance: none;
+  cursor: pointer;
+}
+.language-selector select:hover {
+  border-color: #ffffff;
+}
+
+.language-selector select:focus {
+  border-color: #ffffff;
+}
+.language-selector select option {
+  background-color: #811070;
+  color: #000000;
+}
+.language-selector select option:hover {
+  background-color: #811070;
+}
+
+.header-content-1 {
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: auto;
+}
+
+.header-content-2 {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.right-content {
+  margin-left: 0px;
+}
+
+.left-content {
+  margin-right: 0px;
+}
+
+.compare-price .material-symbols-outlined,
+.cek-transaction i.material-icons,
+.home i.material-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.left-content a {
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.home:hover,
+.compare-price:hover,
+.cek-transaction:hover {
+  border-bottom: 5px solid #fff;
+  border-radius: 5px;
+}
+
+.auth-links {
+  display: flex;
+  align-items: center;
+}
+.loginButton {
+  margin-left: -15px;
+  margin-right: 0px;
+}
+.registerButton,
+#profileButtonContainer {
+  margin-left: 0px;
+}
+
+.loginButton a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.registerButton a {
+  color: hsl(0, 0%, 0%);
+  text-decoration: none;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-left: -10px;
+}
+
+.profileButton {
+  background-color: transparent; /* Warna latar belakang */
+  color: #ffffff; /* Warna teks */
+  padding: 5px 10px; /* Padding */
+  border: 3px groove #ffffff; /* Tidak ada border */
+  cursor: pointer; /* Cursor pointer */
+  border-radius: 5px; /* Border radius */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.dropdown-content {
+  display: none; /* Pastikan ini tetap 'none' */
+  margin-left: 20px;
+  position: absolute;
+  background-color: #560032;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.dropdown-content a:hover {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 0px 0px 10px 10px;
+  color: #000000;
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+form {
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+label {
+  color: #ffffff;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="file"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #000000;
+}
+
+inpu#file-upload-button {
+  color: #000000;
+}
+input[type="file"]::file-selector-button,
+input[type="text"]::placeholder {
+  color: #000000;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
